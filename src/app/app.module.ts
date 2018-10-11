@@ -1,43 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { MaterialModule } from './material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { SharedModule } from './modules/shared/shared.module';
-import { LocationStrategy, CommonModule, HashLocationStrategy } from '@angular/common';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app.routing';
+import { NavbarModule } from './shared/navbar/navbar.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { SidebarModule } from './sidebar/sidebar.module';
 
 import { AppComponent } from './app.component';
 
-
-import { routing } from './app-routing.module';
-
-
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    MaterialModule,
-    SharedModule,
-    routing,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatMenuModule,
-    FlexLayoutModule,
-    CommonModule
+    FormsModule,
+    RouterModule,
+    HttpModule,
+    NavbarModule,
+    FooterModule,
+    SidebarModule,
+    AppRoutingModule
   ],
-  providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    }
+  declarations: [
+    AppComponent,
+    AdminLayoutComponent
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
