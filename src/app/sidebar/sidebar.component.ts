@@ -8,14 +8,14 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'pe-7s-graph', class: '' },
-    { path: '/user', title: 'User Profile',  icon:'pe-7s-user', class: '' },
-    { path: '/table', title: 'Table List',  icon:'pe-7s-note2', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'pe-7s-news-paper', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'pe-7s-science', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'pe-7s-map-marker', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },
-    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'pe-7s-rocket', class: 'active-pro' },
+    { path: '/dashboard', title: 'Inicio',  icon: 'pe-7s-graph', class: '' },
+    { path: '/possibleclient', title: 'Posible cliente',  icon:'pe-7s-user', class: '' },
+    { path: '/table', title: 'Cliente',  icon:'pe-7s-user', class: '' },
+    { path: '/typography', title: 'Contacto',  icon:'pe-7s-user', class: '' },
+    { path: '/icons', title: 'Oportunidades',  icon:'pe-7s-science', class: '' },
+    { path: '/maps', title: 'Prestamos',  icon:'pe-7s-cash', class: '' },
+    { path: '/notifications', title: 'Asociados',  icon:'pe-7s-users', class: '' },
+    { path: '/upgrade', title: 'Salir',  icon:'pe-7s-close', class: 'active-pro' },
 ];
 
 @Component({

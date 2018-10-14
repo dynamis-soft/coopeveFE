@@ -7,7 +7,8 @@
     width: 260px;
     display: block;
     z-index: 5;
-    color: #fff;
+    color: rgb(45, 145, 50);
+    background-color: #fff;
     font-weight: 200;
     background-size: cover;
     background-position: center center;
@@ -64,13 +65,13 @@
         }
     }
     .logo-img{
-        width: 30px;
+        width: 100px;
         display: inline-block;
-        max-height: 30px;
+        max-height: 100px;
         margin-right: 10px;
 
         img{
-            width: 35px;
+            width: 200px;
             top: 11px;
             position: absolute;
         }
