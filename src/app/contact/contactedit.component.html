@@ -4,14 +4,14 @@
             <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Información del posible cliente.</h4>
+                        <h4 class="title">Contactos.</h4>
                     </div>
                     <div class="content">
                         <form>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Nombre</label>
+                                        <label>Nombre de contacto</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -23,24 +23,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Asociado</label>
+                                        <label>Apellido</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        {{data.associated}}
+                                        {{data.lastname}}
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Fecha de ingreso</label>
+                                        <label>Nombre del cliente</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        {{data.date}}
+                                        {{data.nameclient}}
                                     </div>
                                 </div>
                             </div>
@@ -71,48 +71,36 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salario bruto</label>
+                                        <label>Telefono Movil</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        {{data.bruto}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Salario neto</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        {{data.neto}}
+                                        {{data.mobile}}
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Años de trabajo</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        {{data.years_work}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Años de nacimiento</label>
+                                        <label>Cumpleaños</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         {{data.datebirthday}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Descripcion</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{data.description}}
                                     </div>
                                 </div>
                             </div>

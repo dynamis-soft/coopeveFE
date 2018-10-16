@@ -10,15 +10,18 @@ export class AppComponent implements OnInit {
 
      constructor(public location: Location) {}
 
-    ngOnInit(){
+    ngOnInit() {
     }
 
-    isMap(path){
+    isMap(path) {
+      // tslint:disable-next-line:no-var-keyword
       var titlee = this.location.prepareExternalUrl(this.location.path());
       titlee = titlee.slice( 1 );
-      if(path == titlee){
+      // tslint:disable-next-line:triple-equals
+      if (path == titlee) {
         return false;
       }
+      // tslint:disable-next-line:one-line
       else {
         return true;
       }
