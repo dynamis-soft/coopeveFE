@@ -16,9 +16,11 @@ export class ContactComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.globalService.httpServicesResponse({}, 'clients/getClientAll').subscribe(
+        this.globalService.httpServicesResponse({}, 'contact/getContactAll').subscribe(
             data => {
+                // tslint:disable-next-line:prefer-const
                 let result: any = data;
+                // tslint:disable-next-line:triple-equals
                 if (result.status == '99') {
                     alert(result.message);
                 } else {
@@ -33,7 +35,7 @@ export class ContactComponent implements OnInit {
     }
     edit(id) {
         this.router.navigate([
-            '/clientedit', id
+            '/contactedit', id
         ]);
 
     }

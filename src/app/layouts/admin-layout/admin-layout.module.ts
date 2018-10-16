@@ -21,7 +21,7 @@ import { PossibleclienteditComponent } from '../../possibleclient/possibleclient
 import { ClientComponent } from '../../client/client.component';
 import { ClienteditComponent } from '../../client/clientedit.component';
 import { ContactComponent } from '../../contact/contact.component';
-import { ClienteditComponent } from '../../contact/contactedit.component';
+import { ContacteditComponent } from '../../contact/contactedit.component';
 
 @NgModule({
   imports: [
@@ -45,7 +45,7 @@ import { ClienteditComponent } from '../../contact/contactedit.component';
     ClientComponent,
     ClienteditComponent,
     ContactComponent,
-    ClienteditComponent
+    ContacteditComponent
   ]
 })
 
