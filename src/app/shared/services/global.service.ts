@@ -8,7 +8,7 @@ export class GlobalService {
 
     constructor(private http: HttpClient) {
         // localStorage.setItem('url', 'http://localhost:8080/canalesbe/api/');
-        localStorage.setItem('url', 'http://localhost:8080/dynamis-projects/coopeveBE/');
+        localStorage.setItem('url', 'http://localhost:8090/dynamis-projects/coopeveBE/');
     }
     public getUrl() {
         return localStorage.getItem('url');

@@ -18,6 +18,10 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { PossibleclienteditComponent } from '../../possibleclient/possibleclientedit.component';
+import { ClientComponent } from '../../client/client.component';
+import { ClienteditComponent } from '../../client/clientedit.component';
+import { ContactComponent } from '../../contact/contact.component';
+import { ClienteditComponent } from '../../contact/contactedit.component';
 
 @NgModule({
   imports: [
@@ -37,7 +41,11 @@ import { PossibleclienteditComponent } from '../../possibleclient/possibleclient
     NotificationsComponent,
     UpgradeComponent,
     PossibleclientComponent,
-    PossibleclienteditComponent
+    PossibleclienteditComponent,
+    ClientComponent,
+    ClienteditComponent,
+    ContactComponent,
+    ClienteditComponent
   ]
 })
 
