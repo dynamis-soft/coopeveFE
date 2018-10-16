@@ -16,7 +16,7 @@ export class ClientComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.globalService.httpServicesResponse({}, 'clients/getClientAll').subscribe(
+        this.globalService.httpServicesResponse({}, 'clients/getClientsAll').subscribe(
             data => {
                 let result: any = data;
                 if (result.status == '99') {
