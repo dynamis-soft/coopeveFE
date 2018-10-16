@@ -18,7 +18,7 @@ export class ClienteditComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.id = params['id'];
         });
-        this.globalService.httpServicesResponse({ 'id': this.id }, 'clients/getClientId').subscribe(
+        this.globalService.httpServicesResponse({ 'id': this.id }, 'clients/getClientsId').subscribe(
             data => {
                 let result: any = data;
                 this.data = result.data[0];
