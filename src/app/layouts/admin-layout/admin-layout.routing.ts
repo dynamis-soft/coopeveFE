@@ -11,6 +11,10 @@ import { ContactComponent } from '../../contact/contact.component';
 import { ContacteditComponent } from '../../contact/contactedit.component';
 import { OportunityComponent } from '../../opportunity/opportunity.component';
 import { OpportunityeditComponent } from '../../opportunity/opportunityedit.component';
+import { QuotationComponent } from '../../quotation/quotation.component';
+import { QuotationeditComponent } from '../../quotation/quotationedit.component';
+import { AssociatedComponent } from '../../associated/associated.component';
+import { AssociatededitComponent } from '../../associated/associatededit.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -23,6 +27,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'contactedit/:id', component: ContacteditComponent },
     { path: 'opportunity', component: OportunityComponent },
     { path: 'opportunityedit/:id', component: OpportunityeditComponent },
+    { path: 'quotation', component: QuotationComponent },
+    { path: 'quotationedit/:id', component: QuotationeditComponent },
+    { path: 'associated', component: AssociatedComponent },
+    { path: 'associatededit/:id', component: AssociatededitComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'upgrade', component: UpgradeComponent },
 ];

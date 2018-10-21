@@ -24,6 +24,10 @@ import { ContactComponent } from '../../contact/contact.component';
 import { ContacteditComponent } from '../../contact/contactedit.component';
 import { OportunityComponent } from '../../opportunity/opportunity.component';
 import { OpportunityeditComponent } from '../../opportunity/opportunityedit.component';
+import { QuotationComponent } from '../../quotation/quotation.component';
+import { QuotationeditComponent } from '../../quotation/quotationedit.component';
+import { AssociatedComponent } from '../../associated/associated.component';
+import { AssociatededitComponent } from '../../associated/associatededit.component';
 
 @NgModule({
   imports: [
@@ -49,7 +53,11 @@ import { OpportunityeditComponent } from '../../opportunity/opportunityedit.comp
     ContactComponent,
     ContacteditComponent,
     OportunityComponent,
-    OpportunityeditComponent
+    OpportunityeditComponent,
+    QuotationComponent,
+    QuotationeditComponent,
+    AssociatedComponent,
+    AssociatededitComponent
   ]
 })
 
