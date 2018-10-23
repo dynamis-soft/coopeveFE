@@ -8,6 +8,7 @@ import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { GlobalService } from './shared/services/global.service';
+import { ExcelService } from './shared/services/excel.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
@@ -28,7 +29,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AppComponent,
     AdminLayoutComponent
   ],
-  providers: [GlobalService],
+  providers: [GlobalService, ExcelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

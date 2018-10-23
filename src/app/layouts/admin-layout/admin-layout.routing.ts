@@ -15,6 +15,7 @@ import { QuotationComponent } from '../../quotation/quotation.component';
 import { QuotationeditComponent } from '../../quotation/quotationedit.component';
 import { AssociatedComponent } from '../../associated/associated.component';
 import { AssociatededitComponent } from '../../associated/associatededit.component';
+import { IconsComponent } from '../../icons/icons.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -31,6 +32,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'quotationedit/:id', component: QuotationeditComponent },
     { path: 'associated', component: AssociatedComponent },
     { path: 'associatededit/:id', component: AssociatededitComponent },
-    { path: 'notifications', component: NotificationsComponent },
+    { path: 'icons', component: IconsComponent },
     { path: 'upgrade', component: UpgradeComponent },
 ];
