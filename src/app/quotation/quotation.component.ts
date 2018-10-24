@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../shared/services/global.service';
 import { Router } from '@angular/router';
+import { ExcelService } from '../shared/services/excel.service';
 
 @Component({
     selector: 'app-quotation',
@@ -10,7 +11,7 @@ export class QuotationComponent implements OnInit {
 
     data: any;
     closeResult: string;
-    constructor(public globalService: GlobalService, private router: Router) {
+    constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
 
     }
 
@@ -37,6 +38,9 @@ export class QuotationComponent implements OnInit {
             '/quotationedit', id
         ]);
 
+    }
+    exportAsXLSX(): void {
+        this.excelService.exportAsExcelFile(this.data, 'Cliente');
     }
 
 }
