@@ -12,8 +12,5 @@ export class AuthService {
             return false;
     }
 
-    get isSuperAdmin() {
-        return true;
-    }
 
 }
