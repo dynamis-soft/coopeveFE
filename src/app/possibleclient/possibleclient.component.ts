@@ -40,10 +40,10 @@ export class PossibleclientComponent implements OnInit {
 
     }
     exportAsXLSX(): void {
-        this.excelService.exportAsExcelFile(this.data, 'Cliente');
+        this.excelService.exportAsExcelFile(this.data, 'possibleclient');
     }
     search() {
-        this.globalService.httpServicesResponse({'value': this.value}, 'client/getClientValue').subscribe(
+        this.globalService.httpServicesResponse({'value': this.value}, 'possibleclient/getPossibleclientValue').subscribe(
             data => {
                 let result: any = data;
                 console.log(result);

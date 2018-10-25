@@ -11,6 +11,7 @@ import { ExcelService } from '../shared/services/excel.service';
 export class ContactComponent implements OnInit {
 
     data: any;
+    value: any;
     closeResult: string;
     constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
 
@@ -41,7 +42,22 @@ export class ContactComponent implements OnInit {
 
     }
     exportAsXLSX(): void {
-        this.excelService.exportAsExcelFile(this.data, 'Cliente');
+        this.excelService.exportAsExcelFile(this.data, 'Contact');
+    }
+
+    search() {
+        this.globalService.httpServicesResponse({ 'value': this.value }, 'contact/getContactValue').subscribe(
+            data => {
+                // tslint:disable-next-line:prefer-const
+                let result: any = data;
+                console.log(result);
+                this.data = result.data;
+            },
+            error => {
+                console.dir(error);
+            }
+        );
+
     }
 
 }

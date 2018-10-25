@@ -11,6 +11,7 @@ export class QuotationComponent implements OnInit {
 
     data: any;
     closeResult: string;
+    value: any;
     constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
 
     }
@@ -40,7 +41,22 @@ export class QuotationComponent implements OnInit {
 
     }
     exportAsXLSX(): void {
-        this.excelService.exportAsExcelFile(this.data, 'Cliente');
+        this.excelService.exportAsExcelFile(this.data, 'Quotation');
+    }
+
+    search() {
+        this.globalService.httpServicesResponse({ 'value': this.value }, 'quotation/getQuotationValue').subscribe(
+            data => {
+                // tslint:disable-next-line:prefer-const
+                let result: any = data;
+                console.log(result);
+                this.data = result.data;
+            },
+            error => {
+                console.dir(error);
+            }
+        );
+
     }
 
 }

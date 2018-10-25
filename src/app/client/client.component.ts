@@ -10,6 +10,7 @@ import { ExcelService } from '../shared/services/excel.service';
 export class ClientComponent implements OnInit {
 
     data: any;
+    value: any;
     closeResult: string;
     constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
 
@@ -18,7 +19,9 @@ export class ClientComponent implements OnInit {
     ngOnInit() {
         this.globalService.httpServicesResponse({}, 'clients/getClientsAll').subscribe(
             data => {
+                // tslint:disable-next-line:prefer-const
                 let result: any = data;
+                // tslint:disable-next-line:triple-equals
                 if (result.status == '99') {
                     alert(result.message);
                 } else {
@@ -39,5 +42,19 @@ export class ClientComponent implements OnInit {
     }
     exportAsXLSX(): void {
         this.excelService.exportAsExcelFile(this.data, 'Cliente');
+    }
+    search() {
+        this.globalService.httpServicesResponse({ 'value': this.value }, 'associated/getAssociatedValue').subscribe(
+            data => {
+                // tslint:disable-next-line:prefer-const
+                let result: any = data;
+                console.log(result);
+                this.data = result.data;
+            },
+            error => {
+                console.dir(error);
+            }
+        );
+
     }
 }
