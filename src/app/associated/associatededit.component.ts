@@ -19,12 +19,11 @@ export class AssociatededitComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.id = params['id'];
         });
-        this.globalService.httpServicesResponse({ 'id': this.id }, 'associated/associatedId').subscribe(
+        this.globalService.httpServicesResponse({ 'id': this.id }, 'associated/getAssociatedId').subscribe(
             data => {
                 // tslint:disable-next-line:prefer-const
                 let result: any = data;
                 this.data = result.data[0];
-                console.log(this.data);
             },
             error => {
                 console.dir(error);

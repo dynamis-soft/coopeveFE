@@ -15,8 +15,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/opportunity', title: 'Oportunidades',  icon: 'pe-7s-science', class: '' },
     { path: '/quotation', title: 'Cotizacion',  icon: 'pe-7s-cash', class: '' },
     { path: '/associated', title: 'Asociados',  icon: 'pe-7s-users', class: '' },
-    { path: '/icons', title: 'Asociados',  icon: 'pe-7s-users', class: '' },
-    { path: '/upgrade', title: 'Salir',  icon: 'pe-7s-close', class: 'active-pro' },
+    { path: '/login', title: 'Salir',  icon: 'pe-7s-close', class: 'active-pro' },
 ];
 
 @Component({

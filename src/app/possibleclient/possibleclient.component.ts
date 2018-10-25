@@ -12,6 +12,7 @@ export class PossibleclientComponent implements OnInit {
 
     data: any;
     closeResult: string;
+    value: any;
     constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
 
     }
@@ -41,5 +42,17 @@ export class PossibleclientComponent implements OnInit {
     exportAsXLSX(): void {
         this.excelService.exportAsExcelFile(this.data, 'Cliente');
     }
+    search() {
+        this.globalService.httpServicesResponse({'value': this.value}, 'client/getClientValue').subscribe(
+            data => {
+                let result: any = data;
+                console.log(result);
+                this.data = result.data;
+            },
+            error => {
+                console.dir(error);
+            }
+        );
 
+    }
 }

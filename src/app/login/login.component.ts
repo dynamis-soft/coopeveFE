@@ -11,7 +11,7 @@ export class LoginComponent {
   username = '';
   password = '';
   constructor(private router: Router, public globalService: GlobalService, ) {
-
+    localStorage.setItem("loggin", '0');
   }
 
   login(): void {
@@ -21,8 +21,9 @@ export class LoginComponent {
         data => {
           let result: any = data;
           if (result.status == '99') {
-            alert(result.message);
+            alert(result.message);            
           } else {
+            localStorage.setItem("loggin", '1');
             this.router.navigate([
               '/dashboard'
             ]);

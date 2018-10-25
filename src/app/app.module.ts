@@ -12,6 +12,10 @@ import { ExcelService } from './shared/services/excel.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/guards/auth.guard';
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -29,7 +33,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AppComponent,
     AdminLayoutComponent
   ],
-  providers: [GlobalService, ExcelService],
+  providers: [GlobalService, ExcelService, AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

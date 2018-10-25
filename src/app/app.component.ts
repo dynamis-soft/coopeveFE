@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
      constructor(public location: Location) {}
 
     ngOnInit() {
+      localStorage.setItem("loggin", '0');
     }
 
     isMap(path) {

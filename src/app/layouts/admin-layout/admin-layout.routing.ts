@@ -17,21 +17,22 @@ import { AssociatedComponent } from '../../associated/associated.component';
 import { AssociatededitComponent } from '../../associated/associatededit.component';
 import { IconsComponent } from '../../icons/icons.component';
 
+import { AuthGuard } from '../../auth/guards/auth.guard';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard', component: HomeComponent },
-    { path: 'possibleclient', component: PossibleclientComponent },
-    { path: 'possibleclientedit/:id', component: PossibleclienteditComponent },
-    { path: 'client', component: ClientComponent },
-    { path: 'clientedit/:id', component: ClienteditComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'contactedit/:id', component: ContacteditComponent },
-    { path: 'opportunity', component: OportunityComponent },
-    { path: 'opportunityedit/:id', component: OpportunityeditComponent },
-    { path: 'quotation', component: QuotationComponent },
-    { path: 'quotationedit/:id', component: QuotationeditComponent },
-    { path: 'associated', component: AssociatedComponent },
-    { path: 'associatededit/:id', component: AssociatededitComponent },
-    { path: 'icons', component: IconsComponent },
-    { path: 'upgrade', component: UpgradeComponent },
+    { path: 'dashboard', component: HomeComponent,  canActivate: [AuthGuard] },
+    { path: 'possibleclient', component: PossibleclientComponent,  canActivate: [AuthGuard] },
+    { path: 'possibleclientedit/:id', component: PossibleclienteditComponent,  canActivate: [AuthGuard] },
+    { path: 'client', component: ClientComponent,  canActivate: [AuthGuard] },
+    { path: 'clientedit/:id', component: ClienteditComponent,  canActivate: [AuthGuard] },
+    { path: 'contact', component: ContactComponent,  canActivate: [AuthGuard] },
+    { path: 'contactedit/:id', component: ContacteditComponent,  canActivate: [AuthGuard] },
+    { path: 'opportunity', component: OportunityComponent,  canActivate: [AuthGuard] },
+    { path: 'opportunityedit/:id', component: OpportunityeditComponent,  canActivate: [AuthGuard] },
+    { path: 'quotation', component: QuotationComponent,  canActivate: [AuthGuard] },
+    { path: 'quotationedit/:id', component: QuotationeditComponent,  canActivate: [AuthGuard] },
+    { path: 'associated', component: AssociatedComponent,  canActivate: [AuthGuard] },
+    { path: 'associatededit/:id', component: AssociatededitComponent,  canActivate: [AuthGuard] },
+    { path: 'icons', component: IconsComponent,  canActivate: [AuthGuard] },
+    { path: 'upgrade', component: UpgradeComponent,  canActivate: [AuthGuard] },
 ];
