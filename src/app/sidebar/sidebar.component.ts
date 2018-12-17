@@ -17,7 +17,8 @@ export const ROUTES: RouteInfo[] = [
     { path: '/associated', title: 'Asociados',  icon: 'pe-7s-users', class: '' },
     { path: '/list', title: 'Usuarios',  icon: 'pe-7s-users', class: '' },
     { path: '/login', title: 'Salir',  icon: 'pe-7s-close', class: 'active-pro' },
-    
+    { path: '/afiliate', title: 'Afiliate', icon: 'pe-7s-close', class: 'active-pro' },
+
 ];
 
 @Component({

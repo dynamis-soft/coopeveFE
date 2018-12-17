@@ -26,6 +26,8 @@ import { OportunityComponent } from '../../opportunity/opportunity.component';
 import { OpportunityeditComponent } from '../../opportunity/opportunityedit.component';
 import { QuotationComponent } from '../../quotation/quotation.component';
 import { QuotationeditComponent } from '../../quotation/quotationedit.component';
+import { AfiliateComponent } from '../../afiliate/afiliate.component';
+import { AfiliateeditComponent } from '../../afiliate/afiliateededit.component';
 import { AssociatedComponent } from '../../associated/associated.component';
 import { AssociatededitComponent } from '../../associated/associatededit.component';
 import { ListComponent } from '../../user/list.component';
@@ -59,6 +61,8 @@ import { ListComponent } from '../../user/list.component';
     QuotationeditComponent,
     AssociatedComponent,
     AssociatededitComponent,
+    AfiliateComponent,
+    AfiliateeditComponent
     ListComponent
   ]
 })
