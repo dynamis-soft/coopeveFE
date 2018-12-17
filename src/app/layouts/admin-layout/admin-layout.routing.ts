@@ -5,7 +5,8 @@ import { PossibleclientComponent } from '../../possibleclient/possibleclient.com
 import { PossibleclienteditComponent } from '../../possibleclient/possibleclientedit.component';
 import { ClientComponent } from '../../client/client.component';
 import { ClienteditComponent } from '../../client/clientedit.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
+import { UserComponent } from '../../user/user.component';
+import { ListComponent } from '../../user/list.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { ContactComponent } from '../../contact/contact.component';
 import { ContacteditComponent } from '../../contact/contactedit.component';
@@ -35,4 +36,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'associatededit/:id', component: AssociatededitComponent,  canActivate: [AuthGuard] },
     { path: 'icons', component: IconsComponent,  canActivate: [AuthGuard] },
     { path: 'upgrade', component: UpgradeComponent,  canActivate: [AuthGuard] },
+    { path: 'list', component: ListComponent,  canActivate: [AuthGuard] },
+    { path: 'user/:id', component: UserComponent,  canActivate: [AuthGuard] },
 ];

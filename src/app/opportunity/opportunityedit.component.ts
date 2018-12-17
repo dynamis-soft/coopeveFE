@@ -18,7 +18,7 @@ export class OpportunityeditComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.id = params['id'];
         });
-        this.globalService.httpServicesResponse({ 'id': this.id }, 'opportunity/opportunityId').subscribe(
+        this.globalService.httpServicesResponse({ 'id': this.id }, 'opportunity/getOpportunityId').subscribe(
             data => {
                 // tslint:disable-next-line:prefer-const
                 let result: any = data;

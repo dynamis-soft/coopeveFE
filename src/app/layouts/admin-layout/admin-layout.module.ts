@@ -28,6 +28,7 @@ import { QuotationComponent } from '../../quotation/quotation.component';
 import { QuotationeditComponent } from '../../quotation/quotationedit.component';
 import { AssociatedComponent } from '../../associated/associated.component';
 import { AssociatededitComponent } from '../../associated/associatededit.component';
+import { ListComponent } from '../../user/list.component';
 
 @NgModule({
   imports: [
@@ -57,7 +58,8 @@ import { AssociatededitComponent } from '../../associated/associatededit.compone
     QuotationComponent,
     QuotationeditComponent,
     AssociatedComponent,
-    AssociatededitComponent
+    AssociatededitComponent,
+    ListComponent
   ]
 })
 

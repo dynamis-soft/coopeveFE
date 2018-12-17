@@ -44,7 +44,7 @@ export class ClientComponent implements OnInit {
         this.excelService.exportAsExcelFile(this.data, 'Cliente');
     }
     search() {
-        this.globalService.httpServicesResponse({ 'value': this.value }, 'associated/getAssociatedValue').subscribe(
+        this.globalService.httpServicesResponse({ 'value': this.value }, 'clients/getClientsValue').subscribe(
             data => {
                 // tslint:disable-next-line:prefer-const
                 let result: any = data;

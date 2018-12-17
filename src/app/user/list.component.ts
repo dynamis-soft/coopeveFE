@@ -5,22 +5,23 @@ import { ExcelService } from '../shared/services/excel.service';
 
 
 @Component({
-    selector: 'app-possibleclient',
-    templateUrl: './possibleclient.component.html'
+    selector: 'app-list',
+    templateUrl: './list.component.html'
 })
-export class PossibleclientComponent implements OnInit {
+export class ListComponent implements OnInit {
 
     data: any;
-    closeResult: string;
     value: any;
+    closeResult: string;
     constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
 
     }
 
     ngOnInit() {
-        this.globalService.httpServicesResponse({}, 'client/getClientAll').subscribe(
+        this.globalService.httpServicesResponse({}, 'admin/getuserAll').subscribe(
             data => {
                 let result: any = data;
+                console.log(data);
                 if (result.status == '99') {
                     alert(result.message);
                 } else {
@@ -35,24 +36,10 @@ export class PossibleclientComponent implements OnInit {
     }
     edit(id) {
         this.router.navigate([
-            '/possibleclientedit', id
+            '/user', id
         ]);
 
     }
-    exportAsXLSX(): void {
-        this.excelService.exportAsExcelFile(this.data, 'possibleclient');
-    }
-    search() {
-        this.globalService.httpServicesResponse({'value': this.value}, 'client/getClientValue').subscribe(
-            data => {
-                let result: any = data;
-                console.log(result);
-                this.data = result.data;
-            },
-            error => {
-                console.dir(error);
-            }
-        );
+    
 
-    }
 }
