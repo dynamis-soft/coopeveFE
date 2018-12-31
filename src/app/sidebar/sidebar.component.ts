@@ -13,12 +13,11 @@ export const ROUTES: RouteInfo[] = [
     { path: '/client', title: 'Cliente',  icon: 'pe-7s-user', class: '' },
     { path: '/contact', title: 'Contacto',  icon: 'pe-7s-user', class: '' },
     { path: '/opportunity', title: 'Oportunidades',  icon: 'pe-7s-science', class: '' },
-    { path: '/quotation', title: 'Cotizacion',  icon: 'pe-7s-cash', class: '' },
+    { path: '/afiliate', title: 'Afiliate',  icon: 'pe-7s-cash', class: '' },
     { path: '/associated', title: 'Asociados',  icon: 'pe-7s-users', class: '' },
     { path: '/list', title: 'Usuarios',  icon: 'pe-7s-users', class: '' },
-    { path: '/login', title: 'Salir',  icon: 'pe-7s-close', class: 'active-pro' },
-    { path: '/afiliate', title: 'Afiliate', icon: 'pe-7s-close', class: 'active-pro' },
-
+    { path: '/update', title: 'Actualizar',  icon: 'pe-7s-refresh-2', class: '' },
+    { path: '/login', title: 'Salir',  icon: 'pe-7s-close', class: 'active-pro' }
 ];
 
 @Component({

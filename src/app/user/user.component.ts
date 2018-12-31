@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
   };
   password: any = "";
   closeResult: string;
-  id;
+  id = 0;
   constructor(public globalService: GlobalService, private router: Router, private route: ActivatedRoute) {
 
   }

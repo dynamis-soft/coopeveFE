@@ -2,12 +2,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { GlobalService } from './shared/services/global.service';
+import { PagerService } from './shared/services/pager.service';
 import { ExcelService } from './shared/services/excel.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +27,7 @@ import { AuthGuard } from './auth/guards/auth.guard';
     HttpModule,
     NavbarModule,
     FooterModule,
+    NgxPaginationModule,
     SidebarModule,
     AppRoutingModule,
     FormsModule
@@ -33,7 +36,7 @@ import { AuthGuard } from './auth/guards/auth.guard';
     AppComponent,
     AdminLayoutComponent
   ],
-  providers: [GlobalService, ExcelService, AuthService,AuthGuard],
+  providers: [GlobalService, ExcelService, AuthService, AuthGuard, PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

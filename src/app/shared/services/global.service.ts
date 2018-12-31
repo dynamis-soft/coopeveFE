@@ -7,9 +7,9 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 export class GlobalService {
 
     constructor(private http: HttpClient) {
-        // localStorage.setItem('url', 'http://localhost:8080/canalesbe/api/');
         localStorage.setItem('url', '');
-        localStorage.setItem('url', 'https://crmapi.coopeve.com/CoopeveBE/');
+        //localStorage.setItem('url', 'https://crmapi.coopeve.com/CoopeveBE/');
+        localStorage.setItem('url', 'http://localhost:8080/dynamis-projects/coopeveBE/');
     }
     public getUrl() {
         return localStorage.getItem('url');

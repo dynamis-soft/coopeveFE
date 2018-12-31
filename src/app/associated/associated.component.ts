@@ -2,22 +2,39 @@ import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../shared/services/global.service';
 import { Router } from '@angular/router';
 import { ExcelService } from '../shared/services/excel.service';
+import { PagerService } from '../shared/services/pager.service';
 
 @Component({
     selector: 'app-associated',
     templateUrl: './associated.component.html'
 })
 export class AssociatedComponent implements OnInit {
-
+    currentPage = 50;
+    page: number = 1;
     data: any;
     value: any;
     closeResult: string;
-    constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService) {
+    to = 1;
+    from = 50;
+    length = 0;
+    custom = 0;
+    // pager object
+    pager: any = {};
+
+    // paged items
+    pagedItems: any[];
+
+
+    constructor(public globalService: GlobalService, private router: Router, private excelService: ExcelService, private pagerService: PagerService) {
 
     }
 
     ngOnInit() {
-        this.globalService.httpServicesResponse({}, 'associated/getassociatedAll').subscribe(
+        this.getAll();
+    }
+
+    getAll() {
+        this.globalService.httpServicesResponse({ "to": this.to, "from": this.from }, 'associated/getassociatedAll').subscribe(
             data => {
                 // tslint:disable-next-line:prefer-const
                 let result: any = data;
@@ -26,14 +43,16 @@ export class AssociatedComponent implements OnInit {
                     alert(result.message);
                 } else {
                     this.data = result.data;
+                    this.length = this.data.cantidad;
+                    this.pager = this.pagerService.getPager(this.length, this.page);
                 }
             },
             error => {
                 console.dir(error);
             }
         );
-
     }
+
     edit(id) {
         this.router.navigate([
             '/associatededit', id
@@ -44,12 +63,13 @@ export class AssociatedComponent implements OnInit {
         this.excelService.exportAsExcelFile(this.data, 'Cliente');
     }
     search() {
+        this.custom = 1;
         this.globalService.httpServicesResponse({ 'value': this.value }, 'associated/getAssociatedValue').subscribe(
             data => {
                 // tslint:disable-next-line:prefer-const
                 let result: any = data;
-                console.log(result);
                 this.data = result.data;
+
             },
             error => {
                 console.dir(error);
@@ -57,5 +77,12 @@ export class AssociatedComponent implements OnInit {
         );
 
     }
-
+    setPage(page: number) {
+        // get pager object from service
+        this.page = page;
+        this.pager = this.pagerService.getPager(this.length, page);
+        this.to = page * this.currentPage;
+        this.from = this.to + this.currentPage;
+        this.getAll();
+    }
 }

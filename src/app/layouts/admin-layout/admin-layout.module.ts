@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { LbdModule } from '../../lbd/lbd.module';
 import { NguiMapModule} from '@ngui/map';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
-
+import { UpdateComponent } from '../../home/update.component';
 import { HomeComponent } from '../../home/home.component';
 import { UserComponent } from '../../user/user.component';
 import { PossibleclientComponent } from '../../possibleclient/possibleclient.component';
@@ -27,7 +26,7 @@ import { OpportunityeditComponent } from '../../opportunity/opportunityedit.comp
 import { QuotationComponent } from '../../quotation/quotation.component';
 import { QuotationeditComponent } from '../../quotation/quotationedit.component';
 import { AfiliateComponent } from '../../afiliate/afiliate.component';
-import { AfiliateeditComponent } from '../../afiliate/afiliateededit.component';
+import { AfiliateeditComponent } from '../../afiliate/afiliateedit.component';
 import { AssociatedComponent } from '../../associated/associated.component';
 import { AssociatededitComponent } from '../../associated/associatededit.component';
 import { ListComponent } from '../../user/list.component';
@@ -41,6 +40,7 @@ import { ListComponent } from '../../user/list.component';
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
   ],
   declarations: [
+    UpdateComponent,
     HomeComponent,
     UserComponent,
     TablesComponent,
@@ -62,7 +62,7 @@ import { ListComponent } from '../../user/list.component';
     AssociatedComponent,
     AssociatededitComponent,
     AfiliateComponent,
-    AfiliateeditComponent
+    AfiliateeditComponent,
     ListComponent
   ]
 })
